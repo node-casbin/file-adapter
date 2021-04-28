@@ -1,0 +1,55 @@
+{
+  "name": "casbin-file-adapter",
+  "version": "0.0.1",
+  "description": "Default file adapter for Casbin",
+  "author": {
+    "email": "nodeces@gmail.com",
+    "name": "Zixuan Liu"
+  },
+  "main": "lib/cjs/index.js",
+  "typings": "lib/cjs/index.d.ts",
+  "module": "lib/esm/index.js",
+  "scripts": {
+    "prepack": "run-s lint test build",
+    "postpack": "run-s clean",
+    "build": "run-s clean && run-p build:*",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "test": "jest",
+    "lint": "eslint . --ext .js,.ts",
+    "fmt": "eslint . --ext .js,.ts --fix",
+    "clean": "rimraf lib",
+    "coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "@types/node": "^15.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "casbin": "^5.6.1",
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.2.4"
+  },
+  "peerDependencies": {
+    "casbin": "^5.6.1"
+  },
+  "files": [
+    "lib",
+    "examples"
+  ],
+  "homepage": "https://casbin.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/node-casbin/file-adapter.git"
+  },
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ]
+}
