@@ -19,7 +19,7 @@
     "lint": "eslint . --ext .js,.ts",
     "fmt": "eslint . --ext .js,.ts --fix",
     "clean": "rimraf lib",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage --forceExit"
   },
   "devDependencies": {
     "@types/jest": "^26.0.23",
