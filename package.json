@@ -1,6 +1,6 @@
 {
   "name": "casbin-file-adapter",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Default file adapter for Casbin",
   "author": {
     "email": "nodeces@gmail.com",
